@@ -493,3 +493,34 @@ header h2{
 #seguridad-datos .col-4,#seguridad-datos .col-12{
     padding:65px 0;
 }
+
+/* ---------------------------------- Optimizacion ---------------------------------- */
+
+.dos-columnas {
+    margin-top:50px;
+    column-count: 2; /* Divide en dos columnas */
+    column-gap: 40px; /* Espacio entre columnas (ajusta según tus preferencias) */
+
+    padding: 0; /* Quita el relleno predeterminado de la lista */
+    padding-left:20px;
+    list-style-type: none; /* Establece el tipo de marcador de lista (por ejemplo, disc) */
+}
+
+.dos-columnas li {
+    margin-bottom: 40px; /* Espacio entre elementos (ajusta según tus preferencias) */
+
+}
+
+.dos-columnas li::before {
+    content: ''; /* Elimina el contenido predeterminado del marcador */
+    background-color: #FF6600;
+    border-radius: 50%; /* Da forma de círculo al marcador */
+    display: inline-block; /* Hace que el marcador sea parte del flujo de texto */
+    width: 20px; /* Ajusta el tamaño del círculo según sea necesario */
+    height: 20px; /* Ajusta el tamaño del círculo según sea necesario */
+    margin-right: 15px; /* Añade un espacio entre el marcador y el texto */
+    box-shadow: 0 0 10px #FF6600;
+    animation: pulse-shadow 2s ease-in-out infinite; /* Repite la animación infinitamente */
+
+
+}

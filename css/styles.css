@@ -1,0 +1,495 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: #3C465C;
+    --primary: #78FFCD;
+    --solid: #fff;
+    --celesteClaro:#769ECB;
+    --azulGris:#758f9c;
+    --azulMorado:#516091;
+
+    /*prueba*/
+    --bs-blue: #0d6efd;
+    --bs-indigo-: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --funBlue:#175a9e;
+    --shark:#1e1e1f;
+    --white_1:#f6f7f1;
+    --bg-colorVidrio:rgba(255, 255, 255, .15);
+    --backdrop-filterVidrio:blur(5px);
+    --azulIntenso:#090979;
+    --negroIn:#020024;
+    --rojoOscuro:#C81D11;
+    --rojoBrillante: #FF0800;
+    --celesteBrillante:#00d4ff;
+    --azulFooter:#1b2a4e;
+    --azulNavBar: rgb(17, 0, 255);
+    --blackTitulos:#444649;
+    --greyPs:#616161;
+    --blackYT:#181818;
+    --linesYT:#303030;
+    --blackYT2:#202020;
+    --blackYT3:#313131;
+    --whiteYT:#f9f9f9;
+    --tittlepurple:#1f2667;
+    /* --z1:#232741; */
+    --z1:#0f172a;
+    --z2:#2c2e43;
+    --z3:#222733;
+    --z4:#080d17;
+    --dark-github:#0d1117;
+    --dark-github-2: #161b22;
+    --dark-beauty:#1e242c;
+    --dark-beauty-2:#171925;
+    --dark-brauty-3:#252934;
+
+    /* Colores nuevos */
+    --bs-indigo: #BE1206;
+    --blur-indigo: rgba(74, 52, 169, 0.6);
+
+    --gameBlue: #0f172a; /*15 23 42*/
+    --gameBlueLight: #1e293b; 
+    --gameLips: #be123c; /*190 18 60*/
+    --gameBlood: #BE1206; /*190 18 6*/
+}
+
+body{
+    font-family: sans-serif;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+    background:var(--z1);
+    height:2000vh;
+    color:var(--bs-light);
+
+}
+/* ---------------------------------- General ---------------------------------- */
+
+section{
+    padding:40px 0;
+}
+section .row h1{
+    /* border:1px solid #FFF; */
+    padding:20px 0;
+}
+
+img {
+    filter: drop-shadow(0 0 10px #FF6600); /* Cambia los valores de rgba para ajustar el color y la intensidad de la sombra */
+} 
+/* Aplica la animación a la imagen */
+img {
+    animation: pulse-shadow 2s ease-in-out infinite; /* Repite la animación infinitamente */
+}
+/* Define la animación llamada "pulse-shadow" */
+@keyframes pulse-shadow {
+    0% {
+        filter: drop-shadow(0 0 10px #FF6600); /* Estado inicial */
+    }
+    50% {
+        filter: drop-shadow(0 0 20px #FF9900); /* Aumenta la sombra a la mitad de la animación */
+    }
+    100% {
+        filter: drop-shadow(0 0 10px #FF6600); /* Vuelve al estado inicial al final de la animación */
+    }
+}
+/* ---------------------------------- Inicio ---------------------------------- */
+header{
+    height:600px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(rgba(5,7,8, 0.3), rgba(5,7,8, 0.4)), url(./../img/hard_disc.jpg);
+    /*Parallax*/
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: repeat;
+
+    gap:20px;
+}
+header h1{
+    font-size:6rem;
+}
+header h2{
+    font-size:4rem;
+}
+#definicion{
+    padding:80px 0;
+}
+#definicion .row .definicion-text{
+    display:flex;
+    align-items:center;
+}
+#definicion .row .definicion-text p{
+    font-size:1.3rem;
+    text-align: justify;
+    line-height:1.8;
+}
+#definicion .row .col-12 img{
+    width:100%;
+    /* border:1px solid var(--bs-light); */
+}
+
+#ssd-hdd .row .col-12{
+    display:flex;
+    flex-direction:column;
+    /* justify-content: center; */
+    align-items: center;
+}
+/* ---------------------------------- SSD HDD ---------------------------------- */
+
+#ssd-hdd img{
+    width:100%;
+    height: auto;
+}
+
+#ssd-hdd img.hard-disc{
+    width:80%;
+}
+
+/* #ssd-hdd .card .card-body{
+    background-color:var(--z4) !important;
+} */
+
+/* ---------------------------------- SSD HDD Comparation ---------------------------------- */
+
+#ssd-hdd-comparation .img-comparation{
+    display:flex;
+    justify-content:center;
+    padding:80px;
+}
+#ssd-hdd-comparation .img-comparation img{
+    width:100%;
+}
+
+#ssd-hdd-comparation .row .col-4, #ssd-hdd-comparation .row .col-12{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+#ssd-hdd-comparation .circulo-diferencias{
+    border:1px solid var(--bs-light);
+    width:120px;
+    height:120px;
+    border-radius:500px;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #FF6600; /* Color naranja intenso */
+    box-shadow: 0 0 10px #FF6600; /* Efecto de sombra */
+    
+}
+#ssd-hdd-comparation .circulo-diferencias svg{
+    width:60%;
+    fill:var(--bs-light);
+    transition: all .4s ease;
+
+}
+
+/* #ssd-hdd-comparation .circulo-diferencias svg:hover{
+    width:100%;
+    fill:red;
+    transition: all .4s ease;
+} */
+/* ---------------------------------- Tipo de almacenamiento y demas ---------------------------------- */
+
+#trta .trta-fila {
+    margin-top:50px;
+    display:flex !important;
+    gap:20px;
+    height:400px;
+}
+
+#trta .trta-fila .trta-block, .rendimiento .trta-block{
+    background:var(--z4);
+    width:50%;
+    height:120px;
+    padding:20px;
+    box-shadow: -7px 7px 7px rgb(0 0 0 / 10%);
+}
+
+#trta .trta-fila .trta-block.second-one{
+    margin-top:130px;
+}
+
+
+/* ---------------------------------- Rendimiento ---------------------------------- */
+.rendimiento{
+    padding:40px 0;
+}
+.rendimiento .trta-block{
+    background:var(--z4);
+    width:70%;
+    height:120px;
+    padding:20px;
+    box-shadow: -7px 7px 7px rgb(0 0 0 / 10%);
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.rendimiento .row{
+    box-shadow: -7px 7px 7px rgb(0 0 0 / 10%);
+    margin-bottom:20px;
+
+}
+.rendimiento .rend-text{
+    background:var(--z4);
+    padding:30px 40px;
+}
+
+
+
+/* ---------------------------------- como elegir capacidad de almacenamiento ---------------------------------- */
+#capacidad-alm .img-vs {
+    display:flex;
+}
+#capacidad-alm .img-vs img{
+    width:300px;
+    /* transform:scaleX(-1); */
+}
+
+.tambaleo-uno{
+    animation: tambaleo 2.5s linear infinite; /* Duración y tipo de animación */
+}
+.tambaleo-dos{
+    animation: tambaleo2 2.5s linear infinite; /* Duración y tipo de animación */
+
+}
+@keyframes tambaleo {
+    0%, 100% {
+      transform: translate(0, 0); /* Posición inicial */
+    }
+    25% {
+      transform: translate(-5px, -5px); /* Mover hacia arriba y hacia la izquierda */
+    }
+    50% {
+      transform: translate(5px, 5px); /* Mover hacia abajo y hacia la derecha */
+    }
+    75% {
+      transform: translate(-5px, 5px); /* Mover hacia arriba y hacia la derecha */
+    }
+}
+
+@keyframes tambaleo2 {
+    0%, 100% {
+      transform: translate(0, 0); /* Posición inicial */
+    }
+    25% {
+        transform: translate(5px, 5px); /* Mover hacia abajo y hacia la derecha */
+    }
+    50% {
+        transform: translate(-5px, -5px); /* Mover hacia arriba y hacia la izquierda */
+    }
+    75% {
+        transform: translate(5px, -5px); /* Mover hacia abajo y hacia la  */
+
+    }
+}
+#capacidad-alm .row {
+    padding:50px 0;
+}
+#capacidad-alm .row .col-6 p{
+    text-align:justify;
+}
+
+#capacidad-alm #carouselExampleIndicators{
+    width:100%;
+    margin:auto;
+}
+#capacidad-alm #carouselExampleIndicators .carousel-inner{
+    width:80%;
+    margin:auto;
+}
+.carousel-item .col-6{
+    height:400px;
+    padding:30px 40px;
+    background:var(--z4);
+}
+
+.carousel-item .img-1{
+    background:url(./../img/tipos_dispositivos.jpg);
+    background-position:40%;
+}
+.carousel-item .img-2{
+    background:url(./../img/uso_previsto.jpg);
+    background-position-y:40%;
+    background-size: cover;
+}
+.carousel-item .img-3{
+    background:url(./../img/presupuesto.jpg);
+    background-size: cover; 
+}
+.carousel-item .img-4{
+    background:url(./../img/futuro.jpg);
+}
+.carousel-item .img-5{
+    background:url(./../img/backup.jpg);
+}
+.carousel-item .img-6{
+    background:url(./../img/compatibilidad.jpg);
+    background-size:cover;
+    background-position-y:40%;
+}
+/* ---------------------------------- Seguridad de Datos ---------------------------------- */
+
+#seguridad-datos .img-seguridad-datos img{
+    width:100%;
+    filter:drop-shadow(none)
+}
+
+.etiqueta{
+    background:var(--z4);
+    width:70%;
+    height:120px;
+    padding:20px;
+    box-shadow: -7px 7px 7px rgb(0 0 0 / 10%);
+    margin:auto;
+    margin-bottom:40px;
+    margin-top:40px;
+}
+
+
+.myCard {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.myCard:hover .innerCard {
+    transform: rotateY(180deg) scale(2); /* Añade esta línea para aumentar el ancho y alto */
+}
+
+.frontSide,
+.backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+}
+
+.frontSide,
+.frontSide::before {
+    background: linear-gradient(43deg, #FFA500 0%, #FF6347 46%, #FFD700 100%);
+}
+
+.backSide,
+.backSide::before {
+    background-image: linear-gradient(160deg, #FFA500 0%, #FF6347 100%);
+}
+
+.backSide {
+    transform: rotateY(180deg);
+}
+
+.frontSide::before,
+.backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animateBright 5s linear infinite;
+}
+
+@keyframes animateBright {
+    0% {
+        opacity: 0.3;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+
+/* Establece un tamaño de fuente para ul y li */
+.backSide ul,
+.backSide li {
+    font-size: .54rem; /* Tamaño de fuente deseado */
+    text-align:left;
+    margin-left:-5px;
+    margin-bottom:5px;
+}
+
+.myCard:hover .innerCard {
+    transform: rotateY(180deg) scale(2);
+}
+
+.col-4 .myCard, .col-12 .myCard{
+    margin:auto;
+}
+
+#seguridad-datos .col-4,#seguridad-datos .col-12{
+    padding:65px 0;
+}

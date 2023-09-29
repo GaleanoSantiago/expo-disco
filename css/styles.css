@@ -144,7 +144,7 @@ p{
 }
 /* ---------------------------------- Inicio ---------------------------------- */
 header{
-    height:600px;
+    height:90vh;
     padding:30px;
     display:flex;
     flex-direction:column;

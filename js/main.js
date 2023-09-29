@@ -13,7 +13,7 @@ hddDiv.addEventListener("mouseenter",()=>{
 })
 hddDiv.addEventListener("mouseleave",()=>{
     // console.log("mouse dejando de hdd");
-    hddImg.src="./img/hard-disc.png";
+    hddImg.src="./img/hhd.png";
 
 })
 

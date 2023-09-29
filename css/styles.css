@@ -153,6 +153,7 @@ header{
     background: linear-gradient(rgba(5,7,8, 0.3), rgba(5,7,8, 0.4)), url(./../img/hard_disc.jpg);
     /*Parallax*/
     background-attachment: fixed;
+    background-size:cover;
     background-position:center;
     background-repeat: repeat;
 

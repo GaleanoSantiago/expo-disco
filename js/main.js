@@ -32,6 +32,48 @@ ssdDiv.addEventListener("mouseleave",()=>{
 })
 
 
+addEventListener("scroll",()=>{
+    // Prueba animacion subrayados al hacer scroll
+
+    let subrayado = document.getElementById("subrayado");
+    let subrayado2=document.getElementById("subrayado-2");
+    let subrayado3 = document.getElementById("subrayado-3");
+    let subrayado4 =document.getElementById("subrayado-4");
+    let subrayado5 =document.getElementById("subrayado-5");
+    let subrayado6 = document.getElementById("subrayado-6");
+    let subrayado7=document.getElementById("subrayado-7");
+    let subrayado8 = document.getElementById("subrayado-8");
+    let subrayado9 =document.getElementById("subrayado-9");
+    let subrayado10 =document.getElementById("subrayado-10");
+    let subrayado11 =document.getElementById("subrayado-11");
+    let subrayado12 =document.getElementById("subrayado-12");
+
+    let subsArray = [subrayado, subrayado2, subrayado3, subrayado4, subrayado5, subrayado6, subrayado7, subrayado8, subrayado9, subrayado10, subrayado11, subrayado12];
+
+    let posicionObjt1 = subrayado.getBoundingClientRect().top;
+    let posicionObjt2 = subrayado2.getBoundingClientRect().top;
+    let posicionObjt3 = subrayado3.getBoundingClientRect().top;
+    let posicionObjt4 = subrayado4.getBoundingClientRect().top;
+    let posicionObjt5 = subrayado5.getBoundingClientRect().top;
+    let posicionObjt6 = subrayado6.getBoundingClientRect().top;
+    let posicionObjt7 = subrayado7.getBoundingClientRect().top;
+    let posicionObjt8 = subrayado8.getBoundingClientRect().top;
+    let posicionObjt9 = subrayado9.getBoundingClientRect().top;
+    let posicionObjt10 = subrayado10.getBoundingClientRect().top;
+    let posicionObjt11 = subrayado11.getBoundingClientRect().top;
+    let posicionObjt12 = subrayado12.getBoundingClientRect().top;
+    let tamanoDePantalla=window.innerHeight;
+
+    let subPosiArray = [posicionObjt1, posicionObjt2, posicionObjt3, posicionObjt4, posicionObjt5, posicionObjt6, posicionObjt7, posicionObjt8, posicionObjt9, posicionObjt10, posicionObjt11, posicionObjt12];
+
+    for(let i=0; i<subPosiArray.length; i++){
+        if(subPosiArray[i] < (tamanoDePantalla-200)){
+            subsArray[i].style.animation = "fade-sub 2s ease";
+            subsArray[i].style.opacity=1;
+        }
+    }
+})
+
 // timeline jquery
 
  

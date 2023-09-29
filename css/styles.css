@@ -90,7 +90,7 @@ body{
     overflow-x: hidden !important;
     scroll-behavior: smooth;
     background:var(--z1);
-    height:2000vh;
+    /* height:2000vh; */
     color:var(--bs-light);
 
 }
@@ -99,13 +99,13 @@ body{
 section{
     padding:40px 0;
 }
-section .row h1{
+/* section .row h1{ */
     /* border:1px solid #FFF; */
-    padding:20px 0;
-}
+    /* padding:20px 0; */
+/* } */
 
 img {
-    filter: drop-shadow(0 0 10px #FF6600); /* Cambia los valores de rgba para ajustar el color y la intensidad de la sombra */
+    filter: drop-shadow(0 0 15px #FF6600); /* Cambia los valores de rgba para ajustar el color y la intensidad de la sombra */
 } 
 /* Aplica la animación a la imagen */
 img {
@@ -151,9 +151,11 @@ header h2{
 #definicion .row .definicion-text{
     display:flex;
     align-items:center;
+    background:var(--z4);
+    padding:30px;
 }
 #definicion .row .definicion-text p{
-    font-size:1.3rem;
+    font-size:1.1rem;
     text-align: justify;
     line-height:1.8;
 }
@@ -188,10 +190,10 @@ header h2{
 #ssd-hdd-comparation .img-comparation{
     display:flex;
     justify-content:center;
-    padding:80px;
+    padding:0 40px 80px 40px ;
 }
 #ssd-hdd-comparation .img-comparation img{
-    width:100%;
+    width:90%;
 }
 
 #ssd-hdd-comparation .row .col-4, #ssd-hdd-comparation .row .col-12{
@@ -210,7 +212,7 @@ header h2{
     justify-content: center;
     align-items:center;
     background-color: #FF6600; /* Color naranja intenso */
-    box-shadow: 0 0 10px #FF6600; /* Efecto de sombra */
+    box-shadow: 0 0 15px #FF6600; /* Efecto de sombra */
     
 }
 #ssd-hdd-comparation .circulo-diferencias svg{
@@ -326,11 +328,11 @@ header h2{
     text-align:justify;
 }
 
-#capacidad-alm #carouselExampleIndicators{
+#capacidad-alm #carouselExampleIndicators, #slotm2 #carouselExampleIndicators2{
     width:100%;
     margin:auto;
 }
-#capacidad-alm #carouselExampleIndicators .carousel-inner{
+#capacidad-alm #carouselExampleIndicators .carousel-inner, #slotm2 #carouselExampleIndicators2 .carousel-inner{
     width:80%;
     margin:auto;
 }
@@ -514,6 +516,7 @@ header h2{
 .dos-columnas li::before {
     content: ''; /* Elimina el contenido predeterminado del marcador */
     background-color: #FF6600;
+    border:1px solid var(--bs-light);
     border-radius: 50%; /* Da forma de círculo al marcador */
     display: inline-block; /* Hace que el marcador sea parte del flujo de texto */
     width: 20px; /* Ajusta el tamaño del círculo según sea necesario */
@@ -523,4 +526,245 @@ header h2{
     animation: pulse-shadow 2s ease-in-out infinite; /* Repite la animación infinitamente */
 
 
+}
+
+
+/* ---------------------------------- SLOT M.2 ---------------------------------- */
+
+.carousel-item .img-7{
+    background:url(./../img/slotm2.jpg);
+    background-size: cover;
+}
+.carousel-item .img-8{
+    background:url(./../img/slotm2-3.jpg);
+    background-size: cover;
+    background-position-x: 40%;
+}
+
+/* ---------------------------------- Timeline ---------------------------------- */
+
+#timeline{
+    padding:80px 0;
+}
+
+.process-wrapper {
+	margin:auto;
+	max-width:1080px;
+}
+
+#progress-bar-container {
+	position:relative;
+	width:90%;
+	margin:auto;
+	height:100px;
+	margin-top:65px;
+}
+
+#progress-bar-container ul {
+	padding:0;
+	margin:0;
+	padding-top:15px;
+	z-index:9999;
+	position:absolute;
+	width:100%;
+	margin-top:-40px
+}
+
+#progress-bar-container li:before {
+	content:" ";
+	display:block;
+	margin:auto;
+	width:30px;
+	height:30px;
+	border-radius:50%;
+	border:solid 2px var(--bs-light);
+	transition:all ease 0.3s;
+     
+}
+
+#progress-bar-container li.active:before, #progress-bar-container li:hover:before {
+	border:solid 2px #fff;
+    background:#FF6600;
+	box-shadow: 0 0 15px #FF6600;
+    /* animation: pulse-shadow 3s linear infinite;  */
+
+}
+
+#progress-bar-container li {
+	list-style:none;
+	float:left;
+	width:16.666%; /* Cambiado del 20% al 16.666% para 6 elementos */
+	text-align:center;
+	color:#aaa;
+	text-transform:uppercase;
+	font-size:11px;
+	cursor:pointer;
+	font-weight:700;
+	transition:all ease 0.2s;
+	vertical-align:bottom;
+	height:60px;
+	position:relative;
+}
+
+#progress-bar-container li .step-inner {
+	position:absolute;
+	width:100%;
+	bottom:0;
+	font-size: 14px;
+}
+
+#progress-bar-container li.active, #progress-bar-container li:hover {
+	color:var(--bs-light);
+}
+
+#progress-bar-container li:after {
+	content:" ";
+	display:block;
+	width:6px;
+	height:6px;
+	background:#777;
+	margin:auto;
+	border:solid 7px #fff;
+	border-radius:50%;
+	margin-top:40px;
+	box-shadow:0 2px 13px -1px rgba(0,0,0,0.3);
+	transition:all ease 0.2s;
+}
+
+#progress-bar-container li:hover:after {
+	background:#555;
+}
+
+#progress-bar-container li.active:after {
+	background:#FF6600;
+}
+
+#progress-bar-container #line {
+	width:80%;
+	margin:auto;
+	background: #eee;
+	height:6px;
+	position:absolute;
+	left:10%;
+	top:57px;
+	z-index:1;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+	content:" ";
+	width:0%; /* Cambiado del 20% al 16.666% para 6 elementos */
+	height:100%;
+	/* background: #207893;	  */
+	background: linear-gradient(to right, #FF6600 0%,#ff9000 100%); 
+    /* background:#FF6600; */
+    box-shadow: 0 0 15px #FF6600;
+	position:absolute;
+	z-index:2;
+	border-radius:50px;
+	transition:all ease 0.9s;
+}
+
+
+#progress-content-section {
+	width:90%;
+	margin: auto;
+	background: var(--z4);
+	border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+	padding:30px 40px;
+	text-align:center;
+}
+
+#progress-content-section .section-content h2 {
+	font-size:20px;
+	text-transform:uppercase;
+	/* color:#333; */
+	letter-spacing:1px;
+}
+
+#progress-content-section .section-content p {
+	font-size:1.05rem;
+	line-height:1.8em;
+	/* color:#777; */
+}
+
+#progress-content-section .section-content {
+	display:none;
+	animation: FadeInUp 700ms ease 1;
+	animation-fill-mode:forwards;
+	transform:translateY(15px);
+	opacity:0;
+}
+
+#progress-content-section .section-content.active {
+	display:block;
+}
+
+@keyframes FadeInUp {
+	0% {
+		transform:translateY(15px);
+		opacity:0;
+	}
+	
+	100% {
+		transform:translateY(0px);
+		opacity:1;
+	}
+}
+
+
+
+
+#nvme .etiqueta{
+    width:650px;
+    padding:30px 40px;
+    height:auto;
+    text-align:justify;
+    margin:30px 0;
+    line-height:1.8rem;
+}
+
+#nvme .etq-1{
+    margin-left:13%;
+}
+/* #nvme .etq-2{
+    margin-left:5%;
+} */
+#nvme .etq-3{
+    margin-left:13%;
+}
+#nvme .nvme-img {
+    display:flex;
+    align-items:center;
+}
+#nvme .nvme-img img{
+    width:550px;
+    animation: tambaleo 2.5s linear infinite;
+
+}
+
+
+.subrayado{      
+    padding:2px;
+    background: #FF6600;
+    background: radial-gradient(circle, #FF6600 0%, rgba(2,0,36,0) 100%);
+    filter: drop-shadow(0 0 15px #FF6600);
+    margin:auto;
+    margin-bottom:50px;
+    /* opacity:1; */
+    animation: fade-sub 2s ease;
+    animation-delay:.4s;
+}
+
+@keyframes fade-sub{
+    0%{
+        width:0;
+    }
+    100%{
+        width:100%;
+    }
 }

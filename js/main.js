@@ -30,3 +30,43 @@ ssdDiv.addEventListener("mouseleave",()=>{
     ssdImg.style.width="100%";
 
 })
+
+
+// timeline jquery
+
+ 
+$(".step").click( function() {
+	$(this).addClass("active").prevAll().addClass("active");
+	$(this).nextAll().removeClass("active");
+});
+
+$(".step01").click(function () {
+    $("#line-progress").css("width", "0%");
+    $(".discovery").addClass("active").siblings().removeClass("active");
+});
+
+$(".step02").click(function () {
+    $("#line-progress").css("width", "19%");
+    $(".strategy").addClass("active").siblings().removeClass("active");
+});
+
+$(".step03").click(function () {
+    $("#line-progress").css("width", "40%");
+    $(".creative").addClass("active").siblings().removeClass("active");
+});
+
+$(".step04").click(function () {
+    $("#line-progress").css("width", "60.5%");
+    $(".production").addClass("active").siblings().removeClass("active");
+});
+
+$(".step05").click(function () {
+    $("#line-progress").css("width", "81%");
+    $(".analysis").addClass("active").siblings().removeClass("active");
+});
+
+$(".step06").click(function () {
+    $("#line-progress").css("width", "100%");
+    $(".2020-adelante").addClass("active").siblings().removeClass("active");
+
+});

@@ -181,6 +181,7 @@ header .container-btn{
     position:fixed;
     top:0;
     left:0;
+    z-index:200;
 }
 header .btn-neon{
     padding: 5px 10px;

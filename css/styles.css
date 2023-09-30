@@ -224,6 +224,8 @@ header nav ul li a{
     color: var(--bs-light);
     transition: all .4s ease;
     text-decoration:none;
+    display:flex;
+    width:100%;
 }
 header nav ul li a:hover{
     color:#FF6600;

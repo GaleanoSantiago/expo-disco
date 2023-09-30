@@ -4,6 +4,22 @@ const ssdDiv = document.getElementById("ssd-div");
 const hddImg = document.getElementById("hdd-img");
 const ssdImg = document.getElementById("ssd-img");
 
+// -------- Nav --------
+const btnNav = document.getElementById("btn-nav");
+const ulNav = document.getElementById("ul-nav");
+const navSide = document.getElementById("nav-side");
+
+
+btnNav.addEventListener("click",()=>{
+    if (navSide.classList.contains("close-nav")) {
+        navSide.classList.replace("close-nav", "open-nav");
+        // navSide.style.width="400px";
+    } else if (navSide.classList.contains("open-nav")) {
+        navSide.classList.replace("open-nav", "close-nav");
+        // navSide.style.width="100px";
+    }
+})
+
 // para la img del hdd
 hddDiv.addEventListener("mouseenter",()=>{
     // console.log("mouse encima de hdd");

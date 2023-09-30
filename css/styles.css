@@ -165,6 +165,110 @@ header h1{
 header h2{
     font-size:4rem;
 }
+header nav {
+    position:fixed;
+    top:80px;
+    left:0;
+    z-index:100;
+    /* border:1px solid #fff; */
+    width:400px;    
+
+    opacity:0;
+    transform:translateX(-100px);    
+}
+header .container-btn{
+    padding:15px 20px 10px;
+    position:fixed;
+    top:0;
+    left:0;
+}
+header .btn-neon{
+    padding: 5px 10px;
+    display:flex;
+}
+header button svg{
+    width:40px;
+    fill:var(--bs-light);
+}
+header nav ul{
+    list-style:none;
+    padding:20px;
+    margin-left:20px;
+    /* border:1px solid red; */
+    display:flex;
+    gap:10px;
+    flex-direction:column;
+    transition: all .4s ease;
+
+    /* From https://css.glass */
+    background: rgba(8, 13, 23, 0.54);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(8, 13, 23, 0.3);
+
+    
+}
+header nav ul:hover{
+    background: rgba(8, 13, 23);
+    transition: all .4s ease;
+}
+
+header nav ul li{
+    /* border-bottom:1px solid var(--bs-light); */
+    font-size:1.1rem;
+}
+header nav ul li a{
+    color: var(--bs-light);
+    transition: all .4s ease;
+    text-decoration:none;
+}
+header nav ul li a:hover{
+    color:#FF6600;
+    transition: all .4s ease;
+    filter: drop-shadow(0 0 8px #FF6600);
+
+}
+
+.close-nav{
+    animation: closeNav .5s ease;
+    transform:translateX(-100%);
+    opacity:0;
+}
+.open-nav{
+    animation: openNav .5s ease;
+    transform:translateX(0);
+    opacity:1;
+}
+@keyframes closeNav{
+    0%{
+        transform:translateX(0);
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        transform:translateX(-100%);
+        opacity:0;
+    }
+} 
+@keyframes openNav{
+    0%{
+        transform:translateX(-100px);
+        opacity:1;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateX(0);
+        opacity:1;
+    }
+} 
+
+
 #definicion{
     padding:80px 0;
 }

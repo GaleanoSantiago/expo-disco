@@ -11,7 +11,10 @@ const btnsSSD = document.querySelectorAll('#section-ssd .btn-img');
 let imgsHdd = ["hhd.png", "hdd-back.png", "hdd-inside.png"];
 //--------- Arreglos con las imagenes del ssd --------- 
 let imgsSsd = ["ssd.png", "ssd-back.png", "ssd2.png"];
-
+//--------- Arreglos con las imagenes de la comparativa --------- 
+let previewBtn = document.getElementById("previewBtn");
+let fowardBtn = document.getElementById("fowardBtn");
+const imgVS = document.getElementById("comparativa");
 
 // -------- Nav --------
 const btnNav = document.getElementById("btn-nav");
@@ -38,9 +41,31 @@ for(let i=0; i< btnsSSD.length; i++){
         ssdImg.src=`./img/${imgsSsd[i]}`;
     })
 }
+// --------------- Botones de preview y foward ---------------
 
+// ---------- definir vsNumber como 1 ----------
+let vsNumber = 1;
+// ----------- boton de preview ----------
+fowardBtn.addEventListener("click", ()=>{
+    vsNumber++;
+    if(vsNumber==12){
+        vsNumber=1;
+    }
+    imgVS.src=`./img/ssdvshdd${vsNumber}.jpg`;
+
+})
+// ---------- boton de avanzar ----------
+previewBtn.addEventListener("click", ()=>{
+    vsNumber--;
+    if(vsNumber==0){
+        vsNumber=11;
+    }
+    imgVS.src=`./img/ssdvshdd${vsNumber}.jpg`;
+
+})
+
+// Prueba animacion subrayados al hacer scroll
 addEventListener("scroll",()=>{
-    // Prueba animacion subrayados al hacer scroll
 
     let subrayado = document.getElementById("subrayado");
     let subrayado2=document.getElementById("subrayado-2");

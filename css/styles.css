@@ -350,15 +350,36 @@ header nav ul li a:hover{
 }
 /* ---------------------------------- SSD HDD Comparation ---------------------------------- */
 
+#ssd-hdd-comparation #subrayado-3{
+    margin-bottom:0;
+}
+
 #ssd-hdd-comparation .img-comparation{
     display:flex;
-    justify-content:center;
-    padding:0 40px 80px 40px ;
+    align-items:center;
+    flex-direction:column;
+    padding:0 0 80px 0 ;
 }
 #ssd-hdd-comparation .img-comparation img{
     width:90%;
 }
-
+#ssd-hdd-comparation .img-comparation-btn{
+    display:flex;
+    justify-content:end;
+    width:100%;
+    /* border:1px solid #fff; */
+    gap:10px;
+    transform:translateY(50px) translateX(-50px);
+    z-index:10;
+}
+#ssd-hdd-comparation .img-comparation-btn .btn-neon{
+    width:50px;
+    padding:5px;
+}
+#ssd-hdd-comparation .img-comparation-btn .btn-neon svg{
+    fill:var(--bs-light);
+    width:100%;
+}
 #ssd-hdd-comparation .row .col-4, #ssd-hdd-comparation .row .col-12{
     display:flex;
     flex-direction:column;

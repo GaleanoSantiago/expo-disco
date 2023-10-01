@@ -186,6 +186,7 @@ header .container-btn{
 header .btn-neon{
     padding: 5px 10px;
     display:flex;
+    border-radius:5px;
 }
 header button svg{
     width:40px;
@@ -279,7 +280,10 @@ header nav ul li a:hover{
     display:flex;
     align-items:center;
     background:var(--z4);
-    padding:30px;
+    padding:15px 20px;
+    margin-bottom:20px;
+    box-shadow: -7px 7px 7px rgb(0 0 0 / 10%);
+
 }
 #definicion .row .definicion-text p{
     font-size:1.1rem;
@@ -299,18 +303,50 @@ header nav ul li a:hover{
 }
 /* ---------------------------------- SSD HDD ---------------------------------- */
 
+#ssd-hdd .contenedor-img{
+    height:400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+}
+#ssd-hdd .contenedor-btn-fotos{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 #ssd-hdd img{
     width:100%;
-    height: auto;
+    height: 100%;
 }
 
 #ssd-hdd img.hard-disc{
     width:80%;
 }
-
+#ssd-hdd .btn-neon{
+    max-height:50px;
+}
+#ssd-hdd .contenedor-btn-chages{
+    padding:10px 0;
+}
+#ssd-hdd .contenedor-btn-chages .btn-img{
+    border:1px solid #FF6600;
+    background:var(--z4);
+    /* filter:drop-shadow(0 0 10px #FF6600); */
+    color:#FF6600;
+    padding:10px 10px;
+    margin-right:5px;
+    transition:all .4s ease;
+}
+#ssd-hdd .contenedor-btn-chages .btn-img:hover{
+    background:#FF6600;
+    transition:all .4s ease;
+    filter:drop-shadow(0 0 10px #FF6600);
+    border:1px solid var(--bs-light);
+    color:var(--bs-light);
+}
 .border-end-neon{
     border-right: 1px solid #FF6600;
-    /* filter: drop-shadow(0 0 10px #FF6600); */
 }
 /* ---------------------------------- SSD HDD Comparation ---------------------------------- */
 

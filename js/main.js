@@ -3,6 +3,15 @@ const hddDiv = document.getElementById("hdd-div");
 const ssdDiv = document.getElementById("ssd-div");
 const hddImg = document.getElementById("hdd-img");
 const ssdImg = document.getElementById("ssd-img");
+// --------- Seleccionar los botones dentro de #section-ssd --------- 
+const btnsHDD = document.querySelectorAll('#section-hdd .btn-img');
+// --------- Seleccionar los botones dentro de #section-ssd --------- 
+const btnsSSD = document.querySelectorAll('#section-ssd .btn-img');
+//--------- Arreglos con las imagenes del hdd --------- 
+let imgsHdd = ["hhd.png", "hdd-back.png", "hdd-inside.png"];
+//--------- Arreglos con las imagenes del ssd --------- 
+let imgsSsd = ["ssd.png", "ssd-back.png", "ssd2.png"];
+
 
 // -------- Nav --------
 const btnNav = document.getElementById("btn-nav");
@@ -13,40 +22,22 @@ const navSide = document.getElementById("nav-side");
 btnNav.addEventListener("click",()=>{
     if (navSide.classList.contains("close-nav")) {
         navSide.classList.replace("close-nav", "open-nav");
-        // navSide.style.width="400px";
     } else if (navSide.classList.contains("open-nav")) {
         navSide.classList.replace("open-nav", "close-nav");
-        // navSide.style.width="100px";
     }
 })
 
-// para la img del hdd
-hddDiv.addEventListener("mouseenter",()=>{
-    // console.log("mouse encima de hdd");
-    hddImg.src="./img/hard-disc-png.png";
+for(let i=0; i< btnsHDD.length; i++){
+    btnsHDD[i].addEventListener("click", ()=>{
+        hddImg.src=`./img/${imgsHdd[i]}`;
+    })
+}
 
-
-})
-hddDiv.addEventListener("mouseleave",()=>{
-    // console.log("mouse dejando de hdd");
-    hddImg.src="./img/hhd.png";
-
-})
-
-// para la img del ssd
-ssdDiv.addEventListener("mouseenter",()=>{
-    // console.log("mouse encima de hdd");
-    ssdImg.src="./img/ssd2.png";
-    ssdImg.style.width="80%";
-
-})
-ssdDiv.addEventListener("mouseleave",()=>{
-    // console.log("mouse dejando de hdd");
-    ssdImg.src="./img/ssd.png";
-    ssdImg.style.width="100%";
-
-})
-
+for(let i=0; i< btnsSSD.length; i++){
+    btnsSSD[i].addEventListener("click", ()=>{
+        ssdImg.src=`./img/${imgsSsd[i]}`;
+    })
+}
 
 addEventListener("scroll",()=>{
     // Prueba animacion subrayados al hacer scroll
